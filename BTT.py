@@ -38,10 +38,9 @@ class BinaryTree:
         if(self.root == None):
             print("Tree Is Empty....")
         else:
-            self._preorder(self.root)
+            self._postorder(self.root)
     def _postorder(self,current):
         if current:
-            print(current.data,end=" ")
             self._preorder(current.left_node)
             self._preorder(current.right_node)
             print(current.data, end=" ")
